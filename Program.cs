@@ -1,35 +1,33 @@
-﻿Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
-
-// Your code goes here
-
-if (daysUntilExpiration <= 10)
+﻿using System;
+namespace StanbicIbtc
 {
-    if (daysUntilExpiration == 0)
-    {
-        Console.WriteLine("Your subscription has expired.");
-        discountPercentage = 0;
-    }
+    class Program
+    {  //This method starts the application
+        static void Main(string[] args)
+        {
+            var count = 95.00;
+            count = 77;//Strongly typed
+            bool isSuccessful = true;
+            char letter = 'J';
+            const string name = "Benedict";
+            double amount = 67.98D;
+            string tax = "30";
+            int value = Convert.ToInt16(tax);
 
-    else if (daysUntilExpiration == 1)
-    {
-        discountPercentage = 20;
-        Console.WriteLine($@"Your subscription expires within a day!
-Renew now and save {discountPercentage}%!");
-    }
+            Console.Write("What is your age?:   ");
+            string age = Console.ReadLine();
+            int sum = Convert.ToInt32(age) *10;
 
-    else if (daysUntilExpiration <= 5)
-    {
-        discountPercentage = 10;
-        Console.WriteLine($@"Your subscription expires in {daysUntilExpiration} days.
-Renew now and save {discountPercentage}%!");
-    }
 
-    else 
-    {
-        discountPercentage = 0;
-        Console.WriteLine("Your subscription will expire soon. Renew now!");
+            Console.WriteLine($"My age times 10 is {sum}");
+
+            Console.WriteLine(count);
+            Console.WriteLine(isSuccessful);
+            Console.WriteLine(letter);
+            Console.WriteLine(name);
+            Console.WriteLine(amount);
+            Console.WriteLine(name + " Jannet");
+            
+        }
     }
 }
-
